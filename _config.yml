@@ -1,8 +1,8 @@
 title: Jaime Rodriguez's AI Musings 
 description: >-
   One or two sentences about the blog.
-#url: "https://USERNAME.github.io"
-#baseurl: ""
+url: "https://jaimerodriguez.github.io"
+baseurl: "jaimerodriguez_com"
 
 author:
   name: Jaime Rodriguez 
