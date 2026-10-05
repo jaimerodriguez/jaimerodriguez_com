@@ -1,0 +1,16 @@
+{%- comment -%}
+  Apply the visitor's saved skin before the page paints, so a returning
+  visitor does not see the default skin flash first. The dropdowns are
+  wired up by the script in sub-footer.html.
+{%- endcomment -%}
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("minima-ss");
+      var link = document.getElementById("main-stylesheet");
+      if (link && saved && /^[a-z-]+\.css$/.test(saved)) {
+        link.href = link.href.replace(/[^\/]+$/, saved);
+      }
+    } catch (e) {}
+  })();
+</script>

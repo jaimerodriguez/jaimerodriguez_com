@@ -1,0 +1,52 @@
+<div class="sub-footer">
+  <span id="sf-toggle" onclick="toggleSubFooter()">
+    <span class="sf-toggle-icon"></span>
+  </span>
+  <div id="skin-switch-container">
+    Page rendered with the <select id="skin-switch" class="skin-select">
+      {%- include skin-options.html %}
+    </select> skin of Minima theme.
+  </div>
+</div>
+
+<script>
+  // Skin switcher. Drives every <select class="skin-select"> on the page
+  // (header and sub-footer) and keeps them in sync. The choice is saved in
+  // localStorage and applied early by the script in custom-head.html.
+  (function () {
+    var KEY = "minima-ss";
+    var DEFAULT = "style.css";
+    var link = document.getElementById("main-stylesheet");
+    var selects = Array.prototype.slice.call(document.querySelectorAll(".skin-select"));
+    if (!link || !selects.length) return;
+
+    function isKnown(name) {
+      return Array.prototype.some.call(selects[0].options, function (o) { return o.value === name; });
+    }
+    function apply(name) {
+      var href = link.href.replace(/[^\/]+$/, name);
+      if (link.href !== href) link.href = href;
+      selects.forEach(function (s) { s.value = name; });
+      // Lets other scripts follow the skin, e.g. the comments in comments.html.
+      document.dispatchEvent(new CustomEvent("skin-change", { detail: name }));
+    }
+
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    apply(saved && isKnown(saved) ? saved : DEFAULT);
+
+    selects.forEach(function (s) {
+      s.addEventListener("change", function () {
+        apply(s.value);
+        try { localStorage.setItem(KEY, s.value); } catch (e) {}
+      });
+    });
+
+    var container = document.getElementById("skin-switch-container");
+    if (container) container.style.display = "block";
+  })();
+
+  function toggleSubFooter() {
+    document.querySelector(".site-footer").classList.toggle("sub-footer-hidden");
+  }
+</script>

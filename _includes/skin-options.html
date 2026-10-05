@@ -1,0 +1,13 @@
+{%- comment -%}
+  <option> list for a skin dropdown. The skin configured in _config.yml
+  (minima.skin, "classic" when unset) is served as style.css; every other
+  skin has its own stylesheet in assets/css/.
+{%- endcomment -%}
+{%- assign default_skin = site.minima.skin | default: 'classic' -%}
+{%- for skin in site.data.skins %}
+  {%- if skin == default_skin %}
+  <option value="style.css">{{ skin }}</option>
+  {%- else %}
+  <option value="{{ skin }}.css">{{ skin }}</option>
+  {%- endif %}
+{%- endfor %}

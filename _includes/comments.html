@@ -1,0 +1,69 @@
+{%- comment -%}
+  Post comments via giscus (https://giscus.app), stored as GitHub Discussions.
+  Overrides Minima's Disqus include of the same name. Minima's post layout
+  includes this file only in production builds, which is how GitHub Pages
+  builds. Nothing renders until giscus.repo_id and giscus.category_id are
+  set in _config.yml.
+{%- endcomment -%}
+{%- assign g = site.giscus -%}
+{%- if g.repo and g.repo_id and g.category_id %}
+<section class="post-comments" id="comments">
+  <div class="giscus"></div>
+</section>
+<script>
+  (function () {
+    // Map each Minima skin to the closest giscus theme, so the comment box
+    // follows the theme picker in the header.
+    var DEFAULT_SKIN = {{ site.minima.skin | default: "classic" | jsonify }};
+    var THEMES = {
+      "classic": "light",
+      "dark": "dark",
+      "auto": "preferred_color_scheme",
+      "solarized": "preferred_color_scheme",
+      "solarized-light": "light",
+      "solarized-dark": "dark_dimmed"
+    };
+    function giscusTheme(stylesheet) {
+      var skin = (stylesheet || "").replace(/\.css$/, "");
+      if (!skin || skin === "style") skin = DEFAULT_SKIN;
+      return THEMES[skin] || "preferred_color_scheme";
+    }
+
+    var link = document.getElementById("main-stylesheet");
+    var current = link ? link.href.split("/").pop() : "style.css";
+
+    var script = document.createElement("script");
+    var attrs = {
+      "data-repo": {{ g.repo | jsonify }},
+      "data-repo-id": {{ g.repo_id | jsonify }},
+      "data-category": {{ g.category | default: "Announcements" | jsonify }},
+      "data-category-id": {{ g.category_id | jsonify }},
+      "data-mapping": "pathname",
+      "data-strict": "1",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "top",
+      "data-theme": giscusTheme(current),
+      "data-lang": {{ page.lang | default: site.lang | default: "en" | jsonify }},
+      "data-loading": "lazy"
+    };
+    Object.keys(attrs).forEach(function (k) { script.setAttribute(k, attrs[k]); });
+    script.src = "https://giscus.app/client.js";
+    script.crossOrigin = "anonymous";
+    script.async = true;
+    document.getElementById("comments").appendChild(script);
+
+    // The skin switcher (sub-footer.html) fires "skin-change" with the
+    // stylesheet name whenever a skin is applied.
+    document.addEventListener("skin-change", function (e) {
+      var theme = giscusTheme(e.detail);
+      script.setAttribute("data-theme", theme);
+      var frame = document.querySelector("iframe.giscus-frame");
+      if (frame && frame.contentWindow) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, "https://giscus.app");
+      }
+    });
+  })();
+</script>
+<noscript>Comments need JavaScript. You can also read and join the discussion on <a href="https://github.com/{{ g.repo }}/discussions">GitHub</a>.</noscript>
+{%- endif %}

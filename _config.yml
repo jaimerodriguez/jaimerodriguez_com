@@ -1,0 +1,43 @@
+title: Jaime Rodriguez's AI Musings 
+description: >-
+  One or two sentences about the blog.
+#url: "https://USERNAME.github.io"
+#baseurl: ""
+
+author:
+  name: Jaime Rodriguez 
+  #email: you@example.com
+
+# Minima v3, pinned to a tested commit
+remote_theme: jekyll/minima@4de3223
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+
+paginate: 5
+paginate_path: "/page:num/"
+
+minima:
+  # skin: auto            # classic | dark | auto | solarized | solarized-light | solarized-dark
+  nav_pages:
+    - about.md
+  show_excerpts: true
+  date_format: "%b %-d, %Y"
+  social_links:
+    - { title: GitHub, icon: github, url: "https://github.com/jaimerodriguez" }
+    - { title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/jaime-p-rodriguez/" }
+    - { title: Twitter, icon: twitter, url: "https://twitter.com/jaimerodriguez" }
+  
+  hide_site_feed_link: true
+
+# Comments on posts, via giscus (https://giscus.app). Comments are stored as
+# GitHub Discussions in `repo`. Get repo_id and category_id from giscus.app;
+# comments stay off until both are filled in.
+giscus:
+  repo: jaimerodriguez/jaimerodriguez_com
+  repo_id:
+  category: Announcements
+  category_id:
