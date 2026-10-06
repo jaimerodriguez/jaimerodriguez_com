@@ -1,3 +1,12 @@
+# Welcome 
+
+This is my personal blog, accessible via [https://jaimerodriguez.com](https://jaimerodriguez.com).  It is very new. 
+
+If you were looking for the blog and ran into an issue, please [let me know](https://github.com/jaimerodriguez/jaimerodriguez_com/issues). 
+
+If you are interested in how to setup Jekyll + Minima V3 Theme + giscus, my AI assistant documented it all below. 
+
+
 # Blog setup: GitHub Pages with Minima v3
 
 How this blog was set up, in case it needs to be repeated.
