@@ -8,12 +8,16 @@ Hi, I'm Jaime (pronounced HY-meh) Rodriguez. Thanks for visiting!
 
 ### About this blog
 
-This is a small, part-time hobby blog. Expect raw, geeky explorations and opinions on agentic AI, model evals, AI-assisted coding, and personal assistants. I can't commit to a cadence: I'd rather learn something by trying it first and write about it after.
+This is a small, part-time hobby blog. Expect raw, geeky explorations and opinions on agentic AI, model evals, AI-assisted coding, and personal assistants. 
+Cadence will be sporadic. There is too much to learn. 
 
 ### About me
 
-I am a software architect and emerging technology enthusiast, currently hooked on everything AI. For the titles and dates, see my [LinkedIn](https://linkedin.com/in/jaime-p-rodriguez). Here is the full scoop on who I am:
+I am a software architect and emerging technology enthusiast, currently hooked on everything AI.     
 
+If you are looking for my CV with companies, titles and dates, try my [LinkedIn](https://linkedin.com/in/jaime-p-rodriguez). 
+
+If you want to know who I truly am, here is a start: 
 - I am a husband and father of two wonderful kids, both in college now.
 - I like to tinker with emerging technology: take it apart, truly understand it, then teach it or help others apply it.
 - I spent about 15 years in Developer Relations and Partner Engineering (now called Solution Architecture and Forward Deployed Engineering). I was an early developer advocate for .NET, mobile, cloud, AR/VR (it is still coming), voice assistants, and now AI.

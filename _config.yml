@@ -3,6 +3,7 @@ description: >-
   Musings from a software engineer going AI native.
 url: "https://jaimerodriguez.github.io"
 #baseurl: "jaimerodriguez_com"
+#repository: jaimerodriguez/jaimerodriguez_com
 
 author:
   name: Jaime Rodriguez 
@@ -38,6 +39,7 @@ minima:
 # comments stay off until both are filled in.
 giscus:
   repo: jaimerodriguez/jaimerodriguez_com
-  repo_id:
+  repo_id: R_kgDOU4b4DQ
   category: Announcements
-  category_id:
+  category_id: DIC_kwDOU4b4Dc4DHH67
+ 
