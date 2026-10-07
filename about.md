@@ -8,8 +8,12 @@ Hi, I'm Jaime (pronounced HY-meh) Rodriguez. Thanks for visiting!
 
 ### About this blog
 
-This is a small, part-time hobby blog. Expect raw, geeky explorations and opinions on agentic AI, model evals, AI-assisted coding, and personal assistants. 
-Cadence will be sporadic. There is too much to learn. 
+This is my coding and learning scratchpad. Expect raw, geeky code explorations and opinions on agentic AI, model evals, AI-assisted coding, and personal assistants.
+
+I mostly post when I have something that can save you an hour and that I can package in half that time.
+
+I think a lot about AI-native use cases, org design, and workflows. Those ideas are still baking, and when they are ready they will land on [LinkedIn](https://linkedin.com/in/jaime-p-rodriguez). Follow me there if that's your jam.
+ 
 
 ### About me
 
