@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Latency and Accuracy in System One models"
-date: 2026-10-04 09:00:00 -0700
+date: 2026-10-06 13:56:00 -0700
 tags:  code, models, short-life-span 
 ---
 
