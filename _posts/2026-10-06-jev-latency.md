@@ -13,7 +13,7 @@ On a dataset of ~300 prompts:
 - Latency p50: Jev ~95 ms, OpenAI ~153 ms
 - Latency p95: Jev ~165 ms, OpenAI ~380 ms
 
-Both are plenty fast for routing. I exopect OpenAI will  get faster; their API today is just serving the Luna model, unoptimized.
+Both are plenty fast for routing. I expect OpenAI will  get faster; their API today is just serving the Luna model, unoptimized.
 Use either with confidence, and compare the features in-depth to match your needs (e.g. OpenAI supports image input, I am not using that so I did not factor it). 
 
 I am sure there is lots of possible variance: I tested from Seattle on a low OpenAI usage tier. Want to run it yourself? The source for test is [here](https://github.com/jaimerodriguez/jev_openai_decisions_sample).  I am not a perf engineer, so suggestions for improvements (or mistakes) are welcome. 
