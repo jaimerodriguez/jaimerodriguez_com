@@ -5,7 +5,7 @@ date: 2026-10-05 12:58:00 -0700
 tags:  personal, safe AI, AI Stewardship 
 ---
 
-I wrote this after a long summer break, and it captures a good part of what I believe and strive for. This blog is my AI engineering learning scratchpad, so it felt like the right first post: a way for you to get to know me, and a starting point for tracking, in public, our progress toward AI superintelligence that benefits humanity.
+I wrote this after a long summer break. Since this blog is my AI engineering scratchpad, it feels like the right first post. It's a way for you to get to know me and learn what I believe and strive for. It's also a good starting point for tracking, in public, our progress toward AI superintelligence that benefits humanity.
 
 
 # The Case for AI Stewardship
