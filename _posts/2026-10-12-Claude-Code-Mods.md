@@ -12,7 +12,7 @@ This post has the TL;DR on mods, a learning example to use as your first mod, an
 
 # The 3-minute drill
 
-## 90-second summary
+## Mods: What are they, when to use. 
 
 Mods are plugins, written in TypeScript or JavaScript, that turn Claude Code from a harness into a platform.
 To write a mod, you register for events (still called hooks) and tell Claude Code what to do in each handler.
